@@ -16,7 +16,7 @@ body, html
 
 
 *
-    font-family 'calibre', Helvetica, Arial, 'sans-serif'
+    font-family Roboto,'calibre', Helvetica, Arial, 'sans-serif'
     box-sizing border-box
 
     &:focus, &:active
@@ -118,19 +118,61 @@ ul, li
         
         &--hero
             // background-image url('/assets/hero-twistus.jpg')
-            background-color rgba(255,255,255,.6)
+            background-color rgba(255,255,255,.1)
+            min-height 750px
+            align-items flex-start
+            justify-content flex-start
+            
+            h1,p
+                color white
+                
+            h1
+                margin-top 90px
+                margin-bottom 30px
+
+            p
+                max-width 580px
+                margin-bottom 60px
+                font-size 24px
+                line-height 42px
                 
         &--sales
-            background-color rgba(255,255,255,.6)
+            background-color rgba(255,255,255,.1)
+            
+            a
+                font-weight 500
+                text-decoration underline
+
+            h2,p,a
+                color #4E0F89
+                
+            p
+                line-height 38px
+                
+            p.discount
+                font-style italic
+                font-weight bold
+                font-size 37px
+                color #63C839
+                
+                margin-left 30px
             
         &--accounts
-            background-color rgba(255,255,255,.6)
+            background-color rgba(255,255,255,.1)
+            
+            h2,li,a
+                color white
+                
+            p
+                color rgba(255,255,255,.8)
             
         &--how
-            background-color rgba(255,255,255,.6)
+            background-color rgba(255,255,255,.1)
+            
+            h2,p
+                color #4E0F89
             
         &--shops
-            background-color rgba(255,255,255,.6)
-        
+            background-color rgba(255,255,255,.1)
         
         

@@ -1,0 +1,33 @@
+.sales
+    flex-flow column wrap
+    justify-content center
+    align-items center
+    
+    &-item
+        display flex
+        flex-flow row wrap
+        justify-content space-around
+        align-items center
+        
+        width 1000px
+        
+        margin 20px 0
+        
+        &:nth-child(even)
+            flex-flow row-reverse wrap
+            
+        &-texts
+            max-width 470px
+            
+            display flex
+            flex-flow column wrap
+            justify-content center
+            align-items flex-start
+            
+            &__top
+                display flex
+                flex-flow row wrap
+                justify-content flex-start
+                align-items center
+                
+                margin-bottom 20px

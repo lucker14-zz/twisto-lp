@@ -37,7 +37,7 @@ gulp.task('scripts', function() {
 // Stylus Tasks
 //////////////////////////////
 gulp.task('styles', function () {
-  gulp.src(paths.styles + '/*.styl')
+  gulp.src(paths.styles + '/main.styl')
     .pipe(stylus({
       paths:  ['node_modules'],
       import: ['nib'],
