@@ -1,18 +1,31 @@
+html 
+  -webkit-tap-highlight-color rgba(0,0,0,0)
+  -webkit-text-size-adjust 100%
+
+
 body, html
     position relative
-    padding 0
-    margin 0
     min-height 100vh
-    width 100%
+    min-width 100%
+    background #f2f4fb
     min-width 320px
+    color #141117
+    text-align left
+    margin 0
+    padding 0
 
 
 *
-    font-family "Calibre"
+    font-family 'calibre', Helvetica, Arial, 'sans-serif'
     box-sizing border-box
 
     &:focus, &:active
         outline none !important
+        
+    &, &:before, &:after
+        box-sizing border-box
+        outline 0
+        -webkit-font-smoothing antialiased
 
 
 img, svg
@@ -38,3 +51,86 @@ ul, li
     padding 0
     margin 0
     list-style-type none
+    
+.absolute-background
+    position absolute
+    
+    &--hero
+        display none
+
+        top 0
+        left 0
+        right 0
+        
+        margin-left auto
+        margin-right auto
+        
+        width 1440px
+        height 910px
+        
+        background-image url('assets/hero-twistus.jpg')
+        background-size cover
+        background-position center
+        background-repeat no-repeat
+        
+
+    
+.container
+    display flex
+    
+    &__outer
+        flex-flow row wrap
+        justify-content center
+        align-items center
+        
+        height auto
+        width 100vw
+        
+        &--hero
+            background-color #4C287D
+                
+        &--sales
+            background-color #fff
+            
+        &--accounts
+            background-color #2E006D
+            
+        &--how
+            background-color #fff
+            
+        &--shops
+            background-color #221F25
+        
+    &__inner
+        flex-flow column wrap
+        justify-content space-around
+        align-items center
+
+        max-width 1260px
+        width 100%
+        
+        min-height 500px
+        
+        padding 50px 0
+        
+        @media screen and (max-width 1260px)
+            max-width 95vw
+        
+        &--hero
+            // background-image url('/assets/hero-twistus.jpg')
+            background-color rgba(255,255,255,.6)
+                
+        &--sales
+            background-color rgba(255,255,255,.6)
+            
+        &--accounts
+            background-color rgba(255,255,255,.6)
+            
+        &--how
+            background-color rgba(255,255,255,.6)
+            
+        &--shops
+            background-color rgba(255,255,255,.6)
+        
+        
+        
