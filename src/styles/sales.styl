@@ -9,12 +9,20 @@
         justify-content space-around
         align-items center
         
-        width 1000px
+        width 980px
         
         margin 20px 0
         
+        
         &:nth-child(even)
             flex-flow row-reverse wrap
+            
+        @media screen and (max-width $screen-lg)
+            width 90vw
+            flex-flow column wrap
+            
+            &:nth-child(even)
+                flex-flow column wrap
             
         &-texts
             max-width 470px
@@ -24,6 +32,11 @@
             justify-content center
             align-items flex-start
             
+            @media screen and (max-width $screen-sm)
+                h2,p
+                    text-align center
+                    width 100%
+            
             &__top
                 display flex
                 flex-flow row wrap
@@ -31,3 +44,11 @@
                 align-items center
                 
                 margin-bottom 20px
+                
+                @media screen and (max-width $screen-sm)
+                    width 100%
+                    flex-flow column wrap
+                    margin-top 20px
+                    
+                    p.discount
+                        margin-left 0

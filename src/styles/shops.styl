@@ -11,6 +11,9 @@
         justify-content center
         align-items center
         
+        @media screen and (max-width $screen-pc)
+            flex-flow column wrap
+        
         &-left
             width 30%
             height 400px
@@ -19,6 +22,15 @@
             justify-content center
             align-items flex-start
             
+            @media screen and (max-width $screen-pc)
+                width 100%
+                height auto
+                margin-bottom 50px
+                
+                h2
+                    width 100%
+                    text-align center
+
         &-right
             width 70%
             height 400px
@@ -26,6 +38,13 @@
             flex-flow row wrap
             justify-content space-between
             align-items stretch
+            
+            @media screen and (max-width $screen-pc)
+                width 100%
+                height auto
+                
+            @media screen and (max-width $screen-xs)
+                justify-content center
             
         &__icon
             display flex
@@ -42,6 +61,16 @@
             &:nth-child(0), &:nth-child(1), &:nth-child(2), &:nth-child(3)
                 margin-bottom 40px  
                 
+            @media screen and (max-width $screen-pc)
+                margin-bottom 40px
+                margin-right 20px
+                margin-left 20px
+                
+            @media screen and (max-width $screen-sm)
+                margin-bottom 20px
+                margin-right 10px
+                margin-left 10px
+                
             p
                 font-weight 900
                 font-size 22px
@@ -54,3 +83,10 @@
 .button--black
     background-color #211f26
     border 2px solid white
+    
+    &:hover
+        background-color #211f26
+    
+    @media screen and (max-width $screen-pc)
+        float none
+        margin 0 auto
