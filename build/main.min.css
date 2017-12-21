@@ -7,7 +7,7 @@ html {
   position: relative;
   min-height: 100vh;
   min-width: 100%;
-  background: #f2f4fb;
+  background: #290058;
   min-width: 320px;
   color: #141117;
   text-align: left;
@@ -88,6 +88,50 @@ li {
   background-position: center;
   background-repeat: no-repeat;
 }
+@media screen and (max-width: 768px) {
+  .absolute-background--hero#outer {
+    display: none;
+  }
+}
+.absolute-background--hero#inner {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .absolute-background--hero#inner {
+    display: block;
+    background-position-y: -25px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .absolute-background--hero#inner {
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+  }
+}
+@media screen and (max-width: 615px) {
+  .absolute-background--hero#inner {
+    background-position-y: bottom;
+  }
+}
+@media screen and (max-width: 1220px) {
+  .absolute-background--hero {
+    height: 750px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .absolute-background--hero {
+    background-image: url("assets/hero-twistus-mobile.jpg");
+  }
+}
+.absolute-background--sales {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+}
 .container {
   display: -webkit-box;
   display: -moz-box;
@@ -123,16 +167,25 @@ li {
   width: 100vw;
 }
 .container__outer--hero {
-  background-color: #4c287d;
+  background-color: #290058;
 }
 .container__outer--sales {
   z-index: 9;
   background-image: url("assets/sales-bg.png");
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  background-size: contain;
+  -webkit-background-size: 1440px 1085px;
+  -moz-background-size: 1440px 1085px;
+  background-size: 1440px 1085px;
   background-position: left;
-  background-repeat-y: repeat;
+  background-repeat-x: repeat;
+  background-repeat-y: no-repeat;
+  background-position-x: 110%;
+  background-position-y: 10px;
+}
+@media screen and (max-width: 768px) {
+  .container__outer--sales {
+    background-color: #fff;
+    background-position-y: 0;
+  }
 }
 .container__outer--accounts {
   background-color: #2e006d;
@@ -144,6 +197,13 @@ li {
   background-position: center;
   background-repeat-y: repeat;
 }
+@media screen and (max-width: 768px) {
+  .container__outer--accounts {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+  }
+}
 .container__outer--how {
   background-color: #fff;
   z-index: 9;
@@ -153,6 +213,13 @@ li {
   background-size: 100%;
   background-position: center;
   background-repeat-y: repeat;
+}
+@media screen and (max-width: 768px) {
+  .container__outer--how {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+  }
 }
 .container__outer--shops {
   background-color: #221f25;
@@ -215,6 +282,12 @@ li {
   margin-top: 90px;
   margin-bottom: 30px;
 }
+@media screen and (max-width: 768px) {
+  .container__inner--hero h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
 .container__inner--hero p {
   max-width: 580px;
   margin-bottom: 60px;
@@ -223,6 +296,18 @@ li {
   opacity: 0.8;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
   filter: alpha(opacity=80);
+}
+@media screen and (max-width: 768px) {
+  .container__inner--hero p {
+    font-size: 18px;
+    line-height: 36px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container__inner--hero {
+    padding-top: 30px;
+  }
 }
 .container__inner--sales a {
   font-weight: 500;
@@ -241,7 +326,7 @@ li {
   font-weight: bold;
   font-size: 37px;
   color: #63c839;
-  margin-left: 30px;
+  margin-left: 25px;
 }
 .container__inner--accounts h2,
 .container__inner--accounts li,
@@ -1388,6 +1473,16 @@ li {
 .icon-youtube:before {
   content: "\27";
 }
+@media screen and (max-width: 980px) {
+  .container__inner--hero p {
+    max-width: 450px;
+  }
+}
+@media screen and (max-width: 1220px) {
+  .container__inner--hero {
+    min-height: 650px;
+  }
+}
 @media screen and (max-width: 768px) {
   .container__inner--hero {
     -webkit-box-align: center;
@@ -1409,14 +1504,12 @@ li {
     -ms-align-items: center;
     -o-align-items: center;
     align-items: center;
+    min-height: 750px;
   }
   .container__inner--hero h1,
   .container__inner--hero p {
     width: 100%;
     text-align: center;
-  }
-  .container__inner--hero p {
-    font-size: 25px;
   }
 }
 .sales {
@@ -1961,6 +2054,10 @@ li {
   margin: 30px 0 60px;
   line-height: 38px;
 }
+.container__inner--how h2 {
+  width: 100%;
+  text-align: center;
+}
 .container__inner--how .tech {
   margin-bottom: 45px;
   position: relative;
@@ -1978,14 +2075,29 @@ li {
     width: 24vw;
   }
 }
-.container__inner--how .tech img#air {
+.container__inner--how .tech div#air {
   width: 1035px;
   height: 605px;
+  background-image: url("assets/how-mbair.png");
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -ms-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 768px) {
+  .container__inner--how .tech div#air {
+    background-image: url("assets/how-mbair-clear.png");
+  }
 }
 @media screen and (max-width: 1220px) {
-  .container__inner--how .tech img#air {
+  .container__inner--how .tech div#air {
     width: 100vw;
     height: 56vw;
+    max-width: 1035px;
+    max-height: 605px;
   }
 }
 .container__inner--shops h2 {

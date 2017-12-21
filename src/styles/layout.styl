@@ -7,7 +7,7 @@ body, html
     position relative
     min-height 100vh
     min-width 100%
-    background #f2f4fb
+    background #290058
     min-width 320px
     color #141117
     text-align left
@@ -75,6 +75,39 @@ ul, li
         background-position center
         background-repeat no-repeat
         
+        &#outer
+            @media screen and (max-width $screen-md)
+                display none
+            
+        &#inner
+            display none
+            
+            @media screen and (max-width $screen-md)
+                display block
+                background-position-y -25px
+                
+            @media screen and (max-width 600px)
+                background-size contain
+                
+            @media screen and (max-width 615px)
+                background-position-y bottom
+
+        @media screen and (max-width $screen-pc)
+            height 750px
+            
+        @media screen and (max-width $screen-md)
+            background-image url('assets/hero-twistus-mobile.jpg')
+            
+    &--sales
+        width 100%
+        height 50%
+        
+        position absolute
+        bottom 0
+        left 0
+        
+        background-color white
+        
 
     
 .container
@@ -91,15 +124,22 @@ ul, li
         width 100vw
         
         &--hero
-            background-color #4C287D
+            background-color #290058
                 
         &--sales
             z-index 9
             
             background-image url('assets/sales-bg.png')
-            background-size contain
+            background-size 1440px 1085px
             background-position left
-            background-repeat-y repeat
+            background-repeat-x repeat
+            background-repeat-y no-repeat
+            background-position-x 110%
+            background-position-y 10px
+            
+            @media screen and (max-width $screen-md)
+                background-color white
+                background-position-y 0
             
         &--accounts
             background-color #2E006D
@@ -110,6 +150,9 @@ ul, li
             background-position center
             background-repeat-y repeat
             
+            @media screen and (max-width $screen-md)
+                background-size cover
+            
         &--how
             background-color #fff
             z-index 9
@@ -118,6 +161,9 @@ ul, li
             background-size 100%
             background-position center
             background-repeat-y repeat
+            
+            @media screen and (max-width $screen-md)
+                background-size cover
             
         &--shops
             background-color #221F25
@@ -154,6 +200,10 @@ ul, li
             h1
                 margin-top 90px
                 margin-bottom 30px
+                
+                @media screen and (max-width $screen-md)
+                    margin-top 20px
+                    margin-bottom 20px
 
             p
                 max-width 580px
@@ -161,6 +211,14 @@ ul, li
                 font-size 24px
                 line-height 42px
                 opacity 0.8
+                
+                @media screen and (max-width $screen-md)
+                    font-size 18px
+                    line-height 36px
+                    margin-bottom 20px
+                    
+            @media screen and (max-width $screen-md)
+                padding-top 30px
                 
         &--sales
             // background-color rgba(255,255,255,.1)
@@ -181,7 +239,7 @@ ul, li
                 font-size 37px
                 color #63C839
                 
-                margin-left 30px
+                margin-left 25px
             
         &--accounts
             // background-color rgba(255,255,255,.1)

@@ -47,9 +47,10 @@
     <link href="main.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <div class="absolute-background absolute-background--hero"></div>
+    <div class="absolute-background absolute-background--hero" id="outer"></div>
 
     <div class="container container__outer container__outer--hero">
+        <div class="absolute-background absolute-background--hero" id="inner"></div>
         <div class="container container__inner container__inner--hero">
             <img src="assets/logo.svg" alt="Twisto.cz" width="214" height="65">
             <h1>Výprodeje jsou tady!</h1>
@@ -58,6 +59,7 @@
         </div>
     </div>
     <div class="container container__outer container__outer--sales">
+        <div class="absolute-background absolute-background--sales"></div>
         <div class="container container__inner container__inner--sales">
             <div class="container sales">
                 <div class="sales-item">
@@ -145,7 +147,7 @@
             <p>Nemáš peníze, ale nové hadry nutně potřebuješ? S Twistem platíš až po 45 dnech. Jednoduše si registruj účet, a jo musíš nahrát všechny doklady.</p>
             <div class="tech">
                 <img src="assets/how-iphone.png" alt="iPhone" id="iphone" width="198" height="406">
-                <img src="assets/how-mbair.png" alt="MacBook Air" id="air">
+                <div src="assets/how-mbair.png" alt="MacBook Air" id="air"></div>
             </div>
             <a href='#' class="button">registrace zdarma</a>
         </div>
