@@ -72,13 +72,14 @@ li {
   position: absolute;
 }
 .absolute-background--hero {
-  display: none;
+  display: block;
+  z-index: 5;
   top: 0;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 1440px;
+  width: auto;
   height: 910px;
   background-image: url("assets/hero-twistus.jpg");
   -webkit-background-size: cover;
@@ -117,6 +118,7 @@ li {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+  position: relative;
   height: auto;
   width: 100vw;
 }
@@ -124,18 +126,41 @@ li {
   background-color: #4c287d;
 }
 .container__outer--sales {
-  background-color: #fff;
+  z-index: 9;
+  background-image: url("assets/sales-bg.png");
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  background-position: left;
+  background-repeat-y: repeat;
 }
 .container__outer--accounts {
   background-color: #2e006d;
+  z-index: 9;
+  background-image: url("assets/accounts-bg.png");
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+  background-position: center;
+  background-repeat-y: repeat;
 }
 .container__outer--how {
   background-color: #fff;
+  z-index: 9;
+  background-image: url("assets/how-bg.png");
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+  background-position: center;
+  background-repeat-y: repeat;
 }
 .container__outer--shops {
   background-color: #221f25;
+  z-index: 9;
 }
 .container__inner {
+  position: relative;
+  z-index: 10;
   -webkit-box-orient: vertical;
   -moz-box-orient: vertical;
   -o-box-orient: vertical;
@@ -168,7 +193,6 @@ li {
   }
 }
 .container__inner--hero {
-  background-color: rgba(255,255,255,0.1);
   min-height: 750px;
   -webkit-box-align: start;
   -moz-box-align: start;
@@ -200,9 +224,6 @@ li {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
   filter: alpha(opacity=80);
 }
-.container__inner--sales {
-  background-color: rgba(255,255,255,0.1);
-}
 .container__inner--sales a {
   font-weight: 500;
   text-decoration: underline;
@@ -222,9 +243,6 @@ li {
   color: #63c839;
   margin-left: 30px;
 }
-.container__inner--accounts {
-  background-color: rgba(255,255,255,0.1);
-}
 .container__inner--accounts h2,
 .container__inner--accounts li,
 .container__inner--accounts a {
@@ -233,15 +251,9 @@ li {
 .container__inner--accounts p {
   color: rgba(255,255,255,0.8);
 }
-.container__inner--how {
-  background-color: rgba(255,255,255,0.1);
-}
 .container__inner--how h2,
 .container__inner--how p {
   color: #4e0f89;
-}
-.container__inner--shops {
-  background-color: rgba(255,255,255,0.1);
 }
 body button {
   overflow: hidden !important;
@@ -1973,7 +1985,7 @@ li {
 @media screen and (max-width: 1220px) {
   .container__inner--how .tech img#air {
     width: 100vw;
-    height: 58vw;
+    height: 56vw;
   }
 }
 .container__inner--shops h2 {
