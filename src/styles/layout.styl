@@ -108,7 +108,6 @@ ul, li
         
         background-color white
         
-
     
 .container
     display flex
@@ -219,7 +218,7 @@ ul, li
                     
             @media screen and (max-width $screen-md)
                 padding-top 30px
-                
+
         &--sales
             // background-color rgba(255,255,255,.1)
             
@@ -240,6 +239,23 @@ ul, li
                 color #63C839
                 
                 margin-left 25px
+                
+            .text-center
+                flex-flow column wrap
+                justify center
+                align-items center
+                max-width 850px
+                margin 120px 0 30px
+                
+                h2, p
+                    text-align center
+                    width 100%
+                
+                p
+                    text-align center
+                    margin-top 20px
+                
+
             
         &--accounts
             // background-color rgba(255,255,255,.1)
@@ -249,6 +265,7 @@ ul, li
                 
             p
                 color rgba(255,255,255,.8)
+                line-height 38px
             
         &--how
             // background-color rgba(255,255,255,.1)

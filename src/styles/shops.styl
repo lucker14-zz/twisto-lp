@@ -2,7 +2,6 @@
     
     h2
         color white
-        margin-bottom 45px
         font-size 44px
     
     .shops
@@ -22,10 +21,23 @@
             justify-content center
             align-items flex-start
             
+            p
+                margin 20px 0
+                color white
+                opacity 0.8
+                line-height 38px
+                max-width 350px
+                
+            
             @media screen and (max-width $screen-pc)
                 width 100%
                 height auto
                 margin-bottom 50px
+                
+                p
+                    float none
+                    margin 20px auto
+                    text-align center
                 
                 h2
                     width 100%

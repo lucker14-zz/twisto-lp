@@ -62,43 +62,47 @@
     <div class="container container__outer container__outer--sales">
         <div class="absolute-background absolute-background--sales"></div>
         <div class="container container__inner container__inner--sales">
+            <div class="container text-center">
+                <h2>Kde nakoupite s Twistem?</h2>
+                <p>Nakupovat můžete nejen na našich spřátelených e-shopech, ale díky Twisto kartě a náramku už i v kamenných obchodech. Jídlo, služby, zábava i móda, vše jako na dlani!</p>
+            </div>
             <div class="container sales">
-                <div class="sales-item">
+                <div class="sales-item" id="first-sales">
                     <div class="sales-item__left">
                         <div class="sales-item__img">
-                            <img src="assets/shop-bear.png" alt="Medvídek" width="258" height="289">
+                            <img src="assets/shops-4home.png" id="first" alt="Ručník" width="316" height="316">
                         </div>
                     </div>
                     <div class="sales-item__right">
                         <div class="sales-item-texts">
                             <div class="sales-item-texts__top">
-                                <h2>Toys are us</h2>
-                                <p class="discount">sleva 5%</p>
+                                <h2>4home.cz</h2>
+                                <p class="discount">sleva 84%</p>
                             </div>
-                            <p>Chtěli byste nakupovat zboží ve výprodeji, ale chybí vám peníze?  <a href="#">Vyzvednout slevu</a></p>
+                            <p>Ať hledáte cokoliv pro váš domov hrnce, záclony, mikrovlnky, komody najdete zde úplně vše. <a href="https://4home.cz/">Vyzvednout slevu</a></p>
                         </div>
                     </div>
                 </div>
-                <div class="sales-item">
+                <div class="sales-item" id="second-sales">
                     <div class="sales-item__left">
                         <div class="sales-item__img">
-                            <img src="assets/shop-coffee.png" alt="Kávovar" width="350" height="265">
+                            <img src="assets/shops-leons.png" id="second" alt="Leons Iris - červená" width="330" height="137">
                         </div>
                     </div>
                     <div class="sales-item__right">
                         <div class="sales-item-texts">
                             <div class="sales-item-texts__top">
-                                <h2>Nescafé</h2>
-                                <p class="discount">sleva 5%</p>
+                                <h2>Leons.cz</h2>
+                                <p class="discount">sleva 25-30%</p>
                             </div>
-                            <p>Chtěli byste nakupovat zboží ve výprodeji, ale chybí vám peníze?  <a href="#">Vyzvednout slevu</a></p>
+                            <p>Leons nabízí zdravotní ortopedickou obuv, ve které se nemusíte stydět. <a href="https://leons.cz/kampan/vanocni-vyprodej">Vyzvednout slevu</a></p>
                         </div>
                     </div>
                 </div>
-                <div class="sales-item">
+                <!-- <div class="sales-item" id="third-sales">
                     <div class="sales-item__left">
                         <div class="sales-item__img">
-                            <img src="assets/shop-shoe.png" alt="Obuv" width="302" height="153">
+                            <img src="assets/shop-shoe.png" id="third" alt="Obuv" width="302" height="153">
                         </div>
                     </div>
                     <div class="sales-item__right">
@@ -110,7 +114,7 @@
                             <p>Chtěli byste nakupovat zboží ve výprodeji, ale chybí vám peníze?  <a href="#">Vyzvednout slevu</a></p>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -120,22 +124,18 @@
             <p class="upper">Čím lépe se poznáme, tím více si můžeme navzájem důvěřovat. Zaregistrujte se! Svěříme vám až 25 000 Kč, vyřídíme za vás reklamace a přihodíme spoustu dalších bonusů.</p>
             <div class="bullets">
                 <div class="bullets-half">
-                    <ul>
-                        <li>Odložená platba 45 dní</li>
-                        <li>Limit až 25 000 Kč</li>
-                        <li>200 Kč za novou registraci</li>
-                        <li>Můžeš si objednat kartu a cool náramek</li>
-                        <li>2 lístky do Cinema city</li>
-                    </ul>
+                    <div class="container ul">
+                        <div class="container li"><div class="bullet"></div><span> Odložená platba 45 dní</span></div>
+                        <div class="container li"><div class="bullet"></div><span> Placení faktur a složenek pomocí fotek</span></div>
+                        <div class="container li"><div class="bullet"></div><span> Přehledný souhrn nákupu na mobilu</span></div>
+                    </div>
                 </div>
                 <div class="bullets-half">
-                    <ul>
-                        <li>Složenky platíš nafocením na mobil</li>
-                        <li>Cash back u e-shopů</li>
-                        <li>Reklamace za tebe řeší Twisto</li>
-                        <li>Vše máš přehledně ve svém účtu i na mobilu</li>
-                        <li>Platíš 1 za měsíc</li>
-                    </ul>
+                    <div class="container ul">
+                        <div class="container li"><div class="bullet"></div><span> Možnost objednáni karty a platebního náramku</span></div>
+                        <div class="container li"><div class="bullet"></div><span> Reklamace za vás řeší Twisto</span></div>
+                        <div class="container li"><div class="bullet"></div><span> BONUS: 200 Kč a 2 vstupenky do Cinema city</span></div>
+                    </div>
                 </div>
             </div>
             <p class="bottom">*Omezené služby můžes využívat i bez registrace</p>
@@ -145,11 +145,15 @@
     <div class="container container__outer container__outer--how">
         <div class="container container__inner container__inner--how">
             <h2>A jak vlastně Twisto vypadá?</h2>
-            <p>Nakupovat můžete všude. S Twisto účtem nakoupíte na více než 400 e-shopech a pomocí Twisto karty nebo náramku i v kamenných obchodech. Registrace vám zabere jenom 5 minut.</p>
             <div class="tech">
                 <img src="assets/how-iphone.png" alt="iPhone" id="iphone" width="198" height="406">
                 <div src="assets/how-mbair.png" alt="MacBook Air" id="air"></div>
             </div>
+            <p><span class="bold">Funguje to jednoduše:</span>
+            <span class="italic">1.</span>Vyberete si zboží. Například novou bundu.
+            <span class="italic">2.</span>Twisto ji za vás zaplatí.
+            <span class="italic">3.</span>Na konci měsíce vám přijde vyúčtovaní všech vašich nakupú, bez navýšení a úroku.</p>
+            <p>Platíte jenom, když si budete chtít vyučtováni odložit o další měsíc.</p>
             <a href='#' class="button">registrace zdarma</a>
         </div>
     </div>
@@ -159,48 +163,49 @@
             <div class="container shops">
                 <div class="container shops-left">
                     <h2>Jede v tom s námi spousta e‑shopů</h2>
+                    <p>Nakupovat můžete všude. S Twisto účtem nakoupíte na více než 400 e-shopech a pomocí Twisto karty nebo náramku i v kamenných obchodech. Registrace vám zabere jenom 5 minut.</p>
                     <a href="#" class="button button--black">registrace zdarma</a>
                 </div>
                 <div class="container shops-right">
                     <div class="shops__icon">
                         <p>Footshop.cz</p>
-                        <img src="assets/shops-footshop.png" alt="Footshop.cz" width="101" height="52">
+                        <img src="assets/logos/shops-footshop.png" alt="Footshop.cz" width="101" height="52">
                         <p class="sale">sleva 5%</p>
                     </div>
                     <div class="shops__icon">
-                        <p>Footshop.cz</p>
-                        <img src="assets/shops-footshop.png" alt="Footshop.cz" width="101" height="52">
+                        <p>Leons.cz</p>
+                        <img src="assets/logos/shops-leons.png" alt="Leons.cz" width="129" height="25">
+                        <p class="sale">sleva 25-30%</p>
+                    </div>
+                    <div class="shops__icon">
+                        <p>4home.cz</p>
+                        <img src="assets/logos/shops-4home.png" alt="4home.cz" width="127" height="67">
+                        <p class="sale">sleva 84%</p>
+                    </div>
+                    <div class="shops__icon">
+                        <p>Sam73.cz</p>
+                        <img src="assets/logos/shops-sam73.png" alt="Sam73.cz" width="94" height="52">
                         <p class="sale">sleva 5%</p>
                     </div>
                     <div class="shops__icon">
-                        <p>Footshop.cz</p>
-                        <img src="assets/shops-footshop.png" alt="Footshop.cz" width="101" height="52">
-                        <p class="sale">sleva 5%</p>
+                        <p>Feedo.cz</p>
+                        <img src="assets/logos/shops-feedo.png" alt="Feedo.cz" width="145" height="37">
+                        <p class="sale">sleva 84%</p>
                     </div>
                     <div class="shops__icon">
-                        <p>Footshop.cz</p>
-                        <img src="assets/shops-footshop.png" alt="Footshop.cz" width="101" height="52">
-                        <p class="sale">sleva 5%</p>
+                        <p>Insportline.cz</p>
+                        <img src="assets/logos/shops-insportline.png" alt="Insporline.cz" width="126" height="21">
+                        <p class="sale">sleva 51%</p>
                     </div>
                     <div class="shops__icon">
-                        <p>Footshop.cz</p>
-                        <img src="assets/shops-footshop.png" alt="Footshop.cz" width="101" height="52">
-                        <p class="sale">sleva 5%</p>
+                        <p>Decodoma.cz</p>
+                        <img src="assets/logos/shops-decodoma.png" alt="Decodoma.cz" width="144" height="29">
+                        <p class="sale">sleva 67%</p>
                     </div>
                     <div class="shops__icon">
-                        <p>Footshop.cz</p>
-                        <img src="assets/shops-footshop.png" alt="Footshop.cz" width="101" height="52">
-                        <p class="sale">sleva 5%</p>
-                    </div>
-                    <div class="shops__icon">
-                        <p>Footshop.cz</p>
-                        <img src="assets/shops-footshop.png" alt="Footshop.cz" width="101" height="52">
-                        <p class="sale">sleva 5%</p>
-                    </div>
-                    <div class="shops__icon">
-                        <p>Footshop.cz</p>
-                        <img src="assets/shops-footshop.png" alt="Footshop.cz" width="101" height="52">
-                        <p class="sale">sleva 5%</p>
+                        <p>Urbanstore.cz</p>
+                        <img src="assets/logos/shops-urbanstore.png" alt="Urbanstore.cz" width="116" height="58">
+                        <p class="sale">sleva 90%</p>
                     </div>
                 </div>
             </div>

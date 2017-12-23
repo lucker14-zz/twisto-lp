@@ -1,16 +1,15 @@
 .container__inner--accounts
 
     p
-        max-width 750px
+        max-width 790px
         text-align center
         
         &.upper, &.bottom
             margin 30px 0 65px 0
     
-    @media screen and (max-width $screen-sm)
-        h2,p
-            width 100%
-            text-align center
+    h2,p
+        width 100%
+        text-align center
             
 .bullets
     display flex
@@ -18,26 +17,55 @@
     justify-content center
     align-items center
     
+    width 100%
+    
     &-half
         display flex
         flex-flow column wrap
         justify-content center
         align-items center
         
-        width 490px
+        width 100%
+        max-width 520px
         
         @media screen and (max-width 1035px)
             width 85vw
         
-        ul
-            list-style-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAJCAYAAAAPU20uAAAABGdBTUEAALGPC/xhBQAAAFRJREFUGBlj/P///yoG3OAXI1DBf9zyDI+Y8EiCpE4SMiGIAWQFDnAKKM6IS8EboKQS2Hosuu8CxbThbkNS8ATIrgNibrgkiAEU8ABiLSBmRJGAcgAUVnr1O+tOeQAAAABJRU5ErkJggg==')
-            
-            @media screen and (max-width 1035px)
-                width 420px
+        div.ul
+            flex-flow column wrap
+            justify-content flex-start
+            align-items center
+            width 100%
 
             @media screen and (max-width $screen-xs)
                 width 100%
 
-            li
-                padding-left 10px
+            div.li
+                flex-flow row wrap
+                justify-content flex-start
+                align-items center
+                
+                width 100%
+
                 margin-bottom 30px
+                font-size 24px
+                
+                color white
+                
+                span
+                    
+                    @media screen and (max-width $screen-sm)
+                        max-width 90%
+                        font-size 20px
+                        line-height 38px
+                
+                div.bullet
+                    width 8px
+                    height 8px
+                    
+                    margin-right 10px
+
+                    background-size cover
+                    background-position center
+                    background-repeat no-repeat
+                    background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAJCAYAAAAPU20uAAAABGdBTUEAALGPC/xhBQAAAFRJREFUGBlj/P///yoG3OAXI1DBf9zyDI+Y8EiCpE4SMiGIAWQFDnAKKM6IS8EboKQS2Hosuu8CxbThbkNS8ATIrgNibrgkiAEU8ABiLSBmRJGAcgAUVnr1O+tOeQAAAABJRU5ErkJggg==')
