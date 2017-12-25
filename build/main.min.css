@@ -357,6 +357,9 @@ li {
   text-align: center;
   margin-top: 20px;
 }
+.container__inner--accounts {
+  padding: 90px 0;
+}
 .container__inner--accounts h2,
 .container__inner--accounts li,
 .container__inner--accounts a {
@@ -366,9 +369,15 @@ li {
   color: rgba(255,255,255,0.8);
   line-height: 38px;
 }
+.container__inner--how {
+  padding: 90px 0;
+}
 .container__inner--how h2,
 .container__inner--how p {
   color: #4e0f89;
+}
+.container__inner--shops {
+  padding: 90px 0 50px;
 }
 body button {
   overflow: hidden !important;
