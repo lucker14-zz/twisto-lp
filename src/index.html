@@ -44,10 +44,24 @@
 
     <link href="main.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="footer.css" type="text/css">
+    <link rel="stylesheet" href="scroll-nav.css" type="text/css">
 
 
 </head>
 <body>
+    <nav class="homepage-bar show">
+        <div class="container">
+            <p class="homepage-bar__paragraph">Máte otázky? Ozvěte se nám na <span class="nowrap">+420 222 70 33 33</span>&nbsp;nebo&nbsp;<a href="mailto:dotaz@twisto.cz">dotaz@twisto.cz</a>.</p>
+            <div class="hidden-sm" style="">
+                <a href="https://www.twisto.cz/registrace/" class="button homepage-bar__cta">Chci se zdarma registrovat</a>
+                
+                    <p class="homepage-bar__credits">+ bonus 200&nbsp;Kč za registraci</p>
+                
+            </div>
+            <a href="https://www.twisto.cz/registrace/" class="button homepage-bar__cta visible-sm">Chci se zdarma registrovat</a>
+        </div>
+    </nav>
+
     <div class="absolute-background absolute-background--hero" id="outer"></div>
 
     <div class="container container__outer container__outer--hero">
@@ -358,5 +372,56 @@
             </div>
         </footer>
 </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="scripts.min.js"></script>
+    <script>
+    $(function(){
+        var didScroll,
+                lastScrollTop = 0,
+                delta = 10,
+                menuOffset = $('.container__inner--sales').offset().top;
+
+        $(window).on('scroll', function (e) {
+            didScroll = true;
+
+            if ($(window).innerWidth() >= 768) {
+                $('.animate').each(function () {
+                    var $this = $(this),
+                        visiblePixels = parseInt($this.data('visible'));
+                    if (isInViewport($this, visiblePixels))
+                        $this.addClass('trigger')
+                });
+            }
+        });
+
+        $('body').trigger('scroll');
+
+        setInterval(function() {
+            if (didScroll) {
+                hasScrolled();
+                didScroll = false;
+            }
+        }, 250);
+
+        function hasScrolled() {
+            var scrollTop = $(this).scrollTop();
+
+            if(Math.abs(lastScrollTop - scrollTop) <= delta)
+                return;
+
+            if (scrollTop > menuOffset){
+                $('.homepage-bar').removeClass('show').addClass('desktop-show');
+            } else if(scrollTop < menuOffset) {
+                $('.homepage-bar').removeClass('show desktop-show');
+            }
+            if(scrollTop < lastScrollTop && scrollTop > menuOffset){
+                if(scrollTop + $(window).height() < $(document).height()) {
+                    $('.homepage-bar').addClass('show').removeClass('desktop-show');
+                }
+            }
+
+            lastScrollTop = scrollTop;
+        }
+    })
+    </script>
 </html>
