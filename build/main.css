@@ -2642,6 +2642,7 @@ li {
 .container__inner--shops .shops__icon p {
   font-weight: 900;
   font-size: 22px;
+  color: #000;
 }
 .container__inner--shops .shops__icon p.sale {
   color: #f2a800;
