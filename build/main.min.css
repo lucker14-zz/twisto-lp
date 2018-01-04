@@ -13,6 +13,8 @@ html {
   text-align: left;
   margin: 0;
   padding: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 * {
   font-family: Roboto, 'calibre', Helvetica, Arial, 'sans-serif';
@@ -81,7 +83,7 @@ li {
   margin-right: auto;
   width: auto;
   height: 910px;
-  background-image: url("assets/hero-twistus.jpg");
+  background-image: url("assets/new-hero-twistus.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -93,25 +95,23 @@ li {
     display: none;
   }
 }
+@media screen and (min-width: 1920px) {
+  .absolute-background--hero#outer {
+    background-position: 1% center;
+  }
+}
+@media screen and (max-width: 1920px) {
+  .absolute-background--hero#outer {
+    background-position: 30% center;
+  }
+}
 .absolute-background--hero#inner {
   display: none;
 }
 @media screen and (max-width: 768px) {
   .absolute-background--hero#inner {
     display: block;
-    background-position-y: -25px;
-  }
-}
-@media screen and (max-width: 600px) {
-  .absolute-background--hero#inner {
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    background-size: contain;
-  }
-}
-@media screen and (max-width: 615px) {
-  .absolute-background--hero#inner {
-    background-position-y: bottom;
+    background-position-y: 75%;
   }
 }
 @media screen and (max-width: 1220px) {
@@ -121,7 +121,7 @@ li {
 }
 @media screen and (max-width: 768px) {
   .absolute-background--hero {
-    background-image: url("assets/hero-twistus-mobile.jpg");
+    background-image: url("assets/new-hero-twistus-mobile.jpg");
   }
 }
 .absolute-background--sales {
@@ -167,7 +167,12 @@ li {
   width: 100vw;
 }
 .container__outer--hero {
-  background-color: #290058;
+  background-color: #20003e;
+}
+@media screen and (max-width: 336px) {
+  .container__outer--hero a.button {
+    padding: 14px 17px 12px;
+  }
 }
 .container__outer--sales {
   z-index: 9;
@@ -378,6 +383,9 @@ li {
 }
 .container__inner--shops {
   padding: 90px 0 50px;
+}
+footer a.button {
+  padding: 18px 30px 12px;
 }
 body button {
   overflow: hidden !important;
@@ -1230,7 +1238,7 @@ h2 {
 }
 @media (min-width: 980px) {
   h2 {
-    font-size: 50px;
+    font-size: 47px;
   }
 }
 h3 {
@@ -1918,6 +1926,7 @@ li {
   }
   .sales-item-texts__top p.discount {
     margin-left: 0;
+    margin-top: 20px;
   }
 }
 .container__inner--accounts p {
@@ -2198,6 +2207,29 @@ li {
   margin-bottom: 30px;
   font-size: 24px;
   color: #fff;
+}
+@media screen and (max-width: 660px) {
+  .bullets-half div.ul div.li {
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -ms-box-orient: horizontal;
+    -o-box-orient: horizontal;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -ms-box-orient: horizontal;
+    -o-box-orient: horizontal;
+    box-orient: horizontal;
+    -webkit-box-lines: single;
+    -moz-box-lines: single;
+    -ms-box-lines: single;
+    -o-box-lines: single;
+    box-lines: single;
+    -webkit-flex-flow: row nowrap;
+    -moz-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    -o-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+  }
 }
 @media screen and (max-width: 660px) {
   .bullets-half div.ul div.li span {
